@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["'Plus Jakarta Sans'", "sans-serif"],
+        sans: ["'Montserrat'", "sans-serif"],
       },
       colors: {
         "slide-primary": "hsl(var(--slide-primary))",
