@@ -13,7 +13,14 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["'Plus Jakarta Sans'", "sans-serif"],
+      },
       colors: {
+        "slide-primary": "hsl(var(--slide-primary))",
+        "slide-foreground": "hsl(var(--slide-foreground))",
+        "slide-muted": "hsl(var(--slide-muted))",
+        "slide-surface": "hsl(var(--slide-surface))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
