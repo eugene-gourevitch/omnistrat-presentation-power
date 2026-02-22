@@ -82,7 +82,7 @@ const PresentationViewer = () => {
                 i === currentSlide ? "border-primary ring-2 ring-primary/30" : "border-border hover:border-primary/50"
               }`}
             >
-              <ScaledSlide>{slide.content}</ScaledSlide>
+              <ScaledSlide>{slide.component({ slideNumber: i + 1, totalSlides: slides.length })}</ScaledSlide>
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
                 <span className="text-white text-xs font-medium">{i + 1}. {slide.title}</span>
               </div>
@@ -112,7 +112,7 @@ const PresentationViewer = () => {
                 i === currentSlide ? "border-primary ring-2 ring-primary/20" : "border-border hover:border-primary/40"
               }`}
             >
-              <ScaledSlide>{slide.content}</ScaledSlide>
+              <ScaledSlide>{slide.component({ slideNumber: i + 1, totalSlides: slides.length })}</ScaledSlide>
             </button>
           ))}
         </div>
@@ -158,7 +158,7 @@ const PresentationViewer = () => {
                 transition={{ duration: 0.25 }}
                 className="w-full h-full"
               >
-                <ScaledSlide>{slides[currentSlide].content}</ScaledSlide>
+                <ScaledSlide>{slides[currentSlide].component({ slideNumber: currentSlide + 1, totalSlides: slides.length })}</ScaledSlide>
               </motion.div>
             </AnimatePresence>
           </div>
