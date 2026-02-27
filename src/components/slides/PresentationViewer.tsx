@@ -2,9 +2,14 @@ import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Maximize2, Minimize2, Grid3X3 } from "lucide-react";
 import ScaledSlide from "./ScaledSlide";
-import { slides } from "./slideData";
+import { slides as defaultSlides, SlideData } from "./slideData";
 
-const PresentationViewer = () => {
+interface PresentationViewerProps {
+  slides?: SlideData[];
+  title?: string;
+}
+
+const PresentationViewer = ({ slides = defaultSlides, title = "OmniStrat Presentation" }: PresentationViewerProps) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [showGrid, setShowGrid] = useState(false);
@@ -124,7 +129,7 @@ const PresentationViewer = () => {
         {!isFullscreen && (
           <div className="flex items-center justify-between px-6 py-3 bg-background border-b border-border">
             <div className="flex items-center gap-3">
-              <span className="text-sm font-semibold">OmniStrat Presentation</span>
+              <span className="text-sm font-semibold">{title}</span>
               <span className="text-xs text-muted-foreground">
                 {currentSlide + 1} / {slides.length}
               </span>
