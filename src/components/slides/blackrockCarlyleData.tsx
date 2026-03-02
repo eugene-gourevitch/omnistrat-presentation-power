@@ -181,23 +181,20 @@ const PainPointsSlide = ({ slideNumber, totalSlides }: { slideNumber: number; to
       <div className="flex-1 grid grid-cols-3 gap-8">
         {[
           {
-            icon: "📊",
             title: "Financial / Operational",
             items: ["Covenant breaches and liquidity crises", "Management departures during turnarounds", "Asset value deterioration"],
           },
           {
-            icon: "🌐",
             title: "Geopolitical / Regulatory",
             items: ["Sanctions exposure and OFAC scrutiny", "CFIUS and cross-border regulatory blocks", "FCPA investigations and compliance failures"],
           },
           {
-            icon: "⚖️",
             title: "Reputational / Legal",
             items: ["Negative media cascading to fund reputation", "Activist campaigns targeting sponsors", "Multi-jurisdictional litigation complexity"],
           },
         ].map((card) => (
           <div key={card.title} className="bg-slide-surface rounded-2xl p-8 flex flex-col">
-            <span className="text-[40px] mb-4">{card.icon}</span>
+            <div className="w-10 h-1 bg-slide-primary rounded-full mb-4" />
             <h3 className="text-[26px] font-bold mb-4">{card.title}</h3>
             <ul className="space-y-3">
               {card.items.map((item) => (
@@ -480,21 +477,18 @@ const TrackRecordSlide = ({ slideNumber, totalSlides }: { slideNumber: number; t
       <div className="flex-1 grid grid-cols-3 gap-8">
         {[
           {
-            icon: "⛏️",
             region: "Africa · 2025",
             title: "Mining License Crisis → Strategic Investment Victory",
             desc: "West African gold mining license under political pressure. Transformed a defensive position into strengthened regional market advantage. $144M in projected cash flow preserved.",
             tag: "Multi-party coordination: Africa, Europe, Americas",
           },
           {
-            icon: "🏛️",
             region: "Europe · 2022",
             title: "Political Persecution → Protected Status",
             desc: "Transformed existential political threat into diplomatic leverage and secured protected status for client facing hostile government action across multiple jurisdictions.",
             tag: "Multi-jurisdictional legal + diplomatic strategy",
           },
           {
-            icon: "🔍",
             region: "International · 2019",
             title: "INTERPOL Weaponization → Legal Victory",
             desc: "Reversed politically-motivated abuse of INTERPOL Red Notice system. Demonstrated how international law enforcement can be turned from threat to vindication.",
@@ -502,7 +496,7 @@ const TrackRecordSlide = ({ slideNumber, totalSlides }: { slideNumber: number; t
           },
         ].map((card) => (
           <div key={card.title} className="bg-slide-surface rounded-2xl p-8 flex flex-col">
-            <span className="text-[36px] mb-3">{card.icon}</span>
+            <div className="w-8 h-1 bg-slide-primary rounded-full mb-3" />
             <p className="text-[14px] text-slide-primary font-semibold uppercase tracking-wider mb-2">{card.region}</p>
             <h3 className="text-[22px] font-bold mb-3">{card.title}</h3>
             <p className="text-[17px] text-slide-muted leading-relaxed flex-1">{card.desc}</p>

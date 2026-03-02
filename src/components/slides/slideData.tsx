@@ -182,15 +182,15 @@ const ServicesSlide = ({ slideNumber, totalSlides }: { slideNumber: number; tota
       </h2>
       <div className="flex-1 grid grid-cols-3 gap-6">
         {[
-          { icon: "🛡️", title: "Crisis Management", desc: "End-to-end crisis response from detection to resolution" },
-          { icon: "📣", title: "Public Relations", desc: "Narrative control, media relations, and reputation management" },
-          { icon: "⚖️", title: "Legal Strategy", desc: "Multi-jurisdictional legal coordination and compliance" },
-          { icon: "🎯", title: "Government Affairs", desc: "Regulatory navigation and public policy strategy" },
-          { icon: "📊", title: "Strategic Intelligence", desc: "OSINT, risk analysis, and competitive intelligence" },
-          { icon: "🌐", title: "Digital Strategy", desc: "Online reputation, social media crisis, and digital forensics" },
+          { title: "Crisis Management", desc: "End-to-end crisis response from detection to resolution" },
+          { title: "Public Relations", desc: "Narrative control, media relations, and reputation management" },
+          { title: "Legal Strategy", desc: "Multi-jurisdictional legal coordination and compliance" },
+          { title: "Government Affairs", desc: "Regulatory navigation and public policy strategy" },
+          { title: "Strategic Intelligence", desc: "OSINT, risk analysis, and competitive intelligence" },
+          { title: "Digital Strategy", desc: "Online reputation, social media crisis, and digital forensics" },
         ].map((service) => (
           <div key={service.title} className="bg-slide-surface rounded-2xl p-8 flex flex-col">
-            <span className="text-[40px] mb-4">{service.icon}</span>
+            <div className="w-10 h-1 bg-slide-primary rounded-full mb-4" />
             <h3 className="text-[24px] font-bold mb-3">{service.title}</h3>
             <p className="text-[18px] text-slide-muted leading-relaxed">{service.desc}</p>
           </div>
